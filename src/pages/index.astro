@@ -1,0 +1,51 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Card from "@/components/Card.astro";
+import { t, changeLanguage } from "i18next";
+import { Trans, LanguageSelector } from "astro-i18next/components";
+import "@/assets/css/home.css";
+
+changeLanguage("en");
+---
+
+<Layout title={t("pageTitle")}>
+  <main>
+    <div class="language-selector">
+      <LanguageSelector showFlag={true} class="languages" />
+    </div>
+    <h1>
+      <Trans i18nKey="welcome"
+        >Welcome to <span class="text-gradient">Astro</span>
+      </Trans>
+    </h1>
+    <p class="instructions">
+      <Trans i18nKey="instructions">
+        Check out the <code>src/pages</code> directory to get started.<br />
+        <strong>Code Challenge:</strong> Translate this page with your language of
+        choice.
+      </Trans>
+    </p>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="https://docs.astro.build/"
+        title={t("cards.documentation.title")}
+        body={t("cards.documentation.body")}
+      />
+      <Card
+        href="https://astro.build/integrations/"
+        title={t("cards.integrations.title")}
+        body={t("cards.integrations.body")}
+      />
+      <Card
+        href="https://astro.build/themes/"
+        title={t("cards.themes.title")}
+        body={t("cards.themes.body")}
+      />
+      <Card
+        href="https://astro.build/chat/"
+        title={t("cards.chat.title")}
+        body={t("cards.chat.body")}
+      />
+    </ul>
+  </main>
+</Layout>

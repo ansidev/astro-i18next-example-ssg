@@ -1,0 +1,23 @@
+{
+  "pageTitle": "Chào mừng đến với Astro.",
+  "welcome": "Chào mừng đến với <0>Astro</0>",
+  "instructions": "Mở thư mục <0>src/pages</0> để bắt đầu.<1><2>Thử thách lập trình:</2> Dịch trang này sang ngôn ngữ của bạn.",
+  "cards": {
+    "documentation": {
+      "title": "Tài liệu",
+      "body": "Tìm hiểu cách hoạt động của Astro và khám phá các tài liệu."
+    },
+    "integrations": {
+      "title": "Tích hợp",
+      "body": "Tăng cường dự án của bạn với các frameworks and thư viện mới."
+    },
+    "themes": {
+      "title": "Chủ đề",
+      "body": "Khám phá bộ sưu tập các chủ đề được xây dựng bởi cộng đồng."
+    },
+    "chat": {
+      "title": "Tán gẫu",
+      "body": "Hãy đến và tham gia vào cộng đồng Discord tuyệt vời của chúng tôi. ❤️"
+    }
+  }
+}
