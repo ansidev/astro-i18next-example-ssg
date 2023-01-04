@@ -3,9 +3,19 @@ import Layout from "@/layouts/Layout.astro";
 import Card from "@/components/Card.astro";
 import { t, changeLanguage } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
+import i18nConfig from "~/astro-i18next.config";
 import "@/assets/css/home.css";
 
-changeLanguage("fr");
+export function getStaticPaths() {
+  const locales = i18nConfig.locales;
+  return locales
+    .filter((i) => i !== i18nConfig.defaultLocale)
+    .map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+
+changeLanguage(locale);
 ---
 
 <Layout title={t("pageTitle")}>
